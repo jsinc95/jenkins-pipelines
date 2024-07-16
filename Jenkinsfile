@@ -3,8 +3,8 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'echo "Building..."'
-                sh 'ls -al'
+                sh 'chmod +x ./build.sh'
+                sh './build.sh'
             }
         }
         stage('Test') {
