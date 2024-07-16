@@ -9,10 +9,8 @@ pipeline {
         }
         stage('Test') {
             steps {
-                sh 'echo "Testing..."'
-                sh 'pwd'
-                sh 'touch testfile.txt'
-                sh 'ls -l'
+                sh 'chmod +x ./testing.sh'
+                sh './testing.sh'
             }
         }
         stage('Deploy') {
