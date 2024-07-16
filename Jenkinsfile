@@ -15,10 +15,8 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                sh 'cat ./deploy.sh'
-                sh 'echo "Deploying..."'
-                sh 'mv testfile.txt /tmp'
-                sh 'ls -l /tmp'
+                sh 'chmod +x ./deploy.sh'
+                sh './deploy.sh'
             }
         }
     }
